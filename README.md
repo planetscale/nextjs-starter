@@ -1,34 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Next.js starter
+
+This is a [Next.js](https://nextjs.org/) project that uses [Prisma](https://www.prisma.io/) to connect to a [PlanetScale](https://planetscale.com/) database and [Tailwind CSS](https://tailwindcss.com/) for styling.
 
 ## Getting Started
 
-First, run the development server:
+Clone the repository.
 
 ```bash
-npm run dev
-# or
-yarn dev
+git clone https://github.com/planetscale/nextjs-starter
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+npm install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Set up the database
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Create a PlanetScale database.
+
+//TODO
+
+Create a password for your database.
+
+//TODO
+
+Copy the `.env.local.example` file as `.env.local` and update the `DATABASE_URL` property with the following format.
+
+```text
+mysql://<USERNAME>:<PLAIN_TEXT_PASSWORD>@<ACCESS_HOST_URL>/<DATABASE_NAME>?sslaccept=strict
+```
+
+Push the database schema to your PlanetScale database using Prisma.
+
+`npx prisma db push`
+
+Run the seed script to populate data.
+
+`npx run seed`
+
+## Run the App
+
+Run the app.
+
+`npx run dev`
+
+Open your browser at [localhost:3000](localhost:3000) to see the running application.
+
+## Deploying
+
+Let's deploy this thing.
+
+### Deploy on Vercel
+
+Let's deploy to Vercel.
+
+### Deploy on Netlify
+
+Let's deploy to Netlify.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about PlanetScale, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [PlanetScale  quick start guide](https://docs.planetscale.com/tutorials/planetscale-quick-start-guide) - Learn how to get started with PlanetScale.
