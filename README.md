@@ -18,13 +18,7 @@ npm install
 
 ## Set up the database
 
-Create a PlanetScale database.
-
-//TODO
-
-Create a password for your database.
-
-//TODO
+Create a PlanetScale database in the [dashboard](https://app.planetscale.com/) or by using the [CLI](https://planetscale.com/cli). Then, create a Connection string for your database by following the [documentation](https://docs.planetscale.com/concepts/connection-strings).
 
 Copy the `.env.local.example` file as `.env.local` and update the `DATABASE_URL` property with the following format.
 
@@ -44,7 +38,7 @@ Run the seed script to populate data.
 
 Run the app.
 
-`npx run dev`
+`npm run dev`
 
 Open your browser at [localhost:3000](localhost:3000) to see the running application.
 
