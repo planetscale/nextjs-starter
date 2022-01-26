@@ -44,12 +44,19 @@ Open your browser at [localhost:3000](localhost:3000) to see the running applica
 
 ## Deploying
 
-After you've got your application running, it's time to deploy it. There are several options for deploying.
+After you've got your application running, it's time to get ready to deploy it. To do so, you'll need to promote your databse branch (`main` by default) to be the production branch. Inside of the dashboard page for your branch, you should see the `Promote a branch to production` callout.
+
+![Promote Branch to Master](docs/images/promote-branch.png)
+
+Choose your branch (`main` by default) and then click to promote that branch. For more on branching, check refer to the [documentation](https://docs.planetscale.com/concepts/branching).
+
+Now that your branch has been promoted to master, you can either use the existing password you generated earlier for running locally or create a new password. Regardless, you'll need a password in the deployment steps below.
 
 ### Deploy on Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/planetscale/nextjs-starter)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/planetscale/nextjs-starter&env=DATABASE_URL&project-name=nextjs-starter&repo-name=nextjs-starter).
 
+Make sure to update the `DATABASE_URL` variable during this setup process.
 
 
 Let's deploy to Vercel.
