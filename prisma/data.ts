@@ -13,11 +13,7 @@ export const categories = [
     {
         name: "Shirts",
         description: "Things you wear on the top half of your body"
-    },
-    {
-        name: "Jackets",
-        description: "Warmer things you wear on the top half of your body"
-    },
+    }
 ];
 
 //
@@ -34,7 +30,7 @@ export const products = [
         description: "A nice shirt that you can wear on your body",
         price: new Prisma.Decimal(22.95),
         image: "/images/placeholder.jpg",
-        category_id: 2,
+        category_id: 3,
     },
     {
         name: "Socks",
