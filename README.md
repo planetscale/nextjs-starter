@@ -54,11 +54,12 @@ Now that your branch has been promoted to master, you can either use the existin
 
 ### Deploy on Vercel
 
-<a href="https://vercel.com/new/clone?repository-url=https://github.com/planetscale/nextjs-starter&env=DATABASE_URL&project-name=nextjs-starter&repo-name=nextjs-starter" target="_blank"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/planetscale/nextjs-starter&env=DATABASE_URL)
 
 ### Deploy on Netlify
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/planetscale/nextjs-starter#DATABASE_URL=)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/planetscale/nextjs-starter#DATABASE_URL=<YOUR_DB_URL>)
+
 
 ## Learn More
 
