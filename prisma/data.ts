@@ -26,28 +26,28 @@ export const products = [
         name: "Cool hat.",
         description: "A nice hat to wear on your head",
         price: new Prisma.Decimal(19.95),
-        image: "/images/helmet.jpg",
+        image: "/images/placeholder.jpg",
         category_id: 1,
     },
     {
         name: "Grey T-Shirt",
         description: "A nice shirt that you can wear on your body",
         price: new Prisma.Decimal(22.95),
-        image: "/images/shirt.jpg",
+        image: "/images/placeholder.jpg",
         category_id: 2,
     },
     {
         name: "Socks",
         description: "Cool socks that you can wear on your feet",
         price: new Prisma.Decimal(12.95),
-        image: "/images/socks.jpg",
+        image: "/images/placeholder.jpg",
         category_id: 2,
     },
     {
         name: "Sweatshirt",
         description: "Cool sweatshirt that you can wear on your body",
         price: new Prisma.Decimal(12.95),
-        image: "/images/sweatshirt.jpg",
+        image: "/images/placeholder.jpg",
         category_id: 3,
     }
 ]

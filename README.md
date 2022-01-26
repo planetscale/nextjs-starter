@@ -20,7 +20,7 @@ npm install
 
 Create a PlanetScale database in the [dashboard](https://app.planetscale.com/) or by using the [CLI](https://planetscale.com/cli). Then, create a Connection string for your database by following the [documentation](https://docs.planetscale.com/concepts/connection-strings).
 
-Copy the `.env.local.example` file as `.env.local` and update the `DATABASE_URL` property with the following format.
+Copy the `.env.example` file as `.env` and update the `DATABASE_URL` property with the following format.
 
 ```text
 mysql://<USERNAME>:<PLAIN_TEXT_PASSWORD>@<ACCESS_HOST_URL>/<DATABASE_NAME>?sslaccept=strict
@@ -44,9 +44,13 @@ Open your browser at [localhost:3000](localhost:3000) to see the running applica
 
 ## Deploying
 
-Let's deploy this thing.
+After you've got your application running, it's time to deploy it. There are several options for deploying.
 
 ### Deploy on Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/planetscale/nextjs-starter)
+
+
 
 Let's deploy to Vercel.
 
