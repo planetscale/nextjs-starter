@@ -58,7 +58,7 @@ Now that your branch has been promoted to master, you can either use the existin
 
 ### Deploy on Netlify
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/planetscale/nextjs-starter#DATABASE_URL=<YOUR_DB_URL>)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/planetscale/nextjs-starter)
 
 
 ## Learn More
