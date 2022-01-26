@@ -18,45 +18,34 @@ export const categories = [
         name: "Jackets",
         description: "Warmer things you wear on the top half of your body"
     },
-    {
-        name: "Suits",
-        description: "Things you wear to cover your entire body"
-    }
 ];
 
 //
 export const products = [
     {
-        name: "Space Helmet",
-        description: "You'll die without it.",
+        name: "Cool hat.",
+        description: "A nice hat to wear on your head",
         price: new Prisma.Decimal(19.95),
         image: "/images/helmet.jpg",
         category_id: 1,
     },
     {
-        name: "Astronaut Suit",
-        description: "White Astronaut Flight Suit.",
-        price: new Prisma.Decimal(32.95),
-        image: "/images/astronaut-suit.jpg",
-        category_id: 4,
-    },
-    {
         name: "Grey T-Shirt",
-        description: "A grey t-shirt featuring a nice logo.",
+        description: "A nice shirt that you can wear on your body",
         price: new Prisma.Decimal(22.95),
         image: "/images/shirt.jpg",
         category_id: 2,
     },
     {
         name: "Socks",
-        description: "Blck socks with planets on then.",
+        description: "Cool socks that you can wear on your feet",
         price: new Prisma.Decimal(12.95),
         image: "/images/socks.jpg",
         category_id: 2,
     },
     {
         name: "Sweatshirt",
-        description: "Blck sweatshirt with logo on the front.",
+        description: "Cool sweatshirt that you can wear on your body",
         price: new Prisma.Decimal(12.95),
         image: "/images/sweatshirt.jpg",
         category_id: 3,

@@ -5,7 +5,6 @@ const prisma = new PrismaClient();
 const load = async () => {
     try {
         await prisma.category.deleteMany();
-
         console.log("Deleted records in category table");
 
         await prisma.product.deleteMany();
