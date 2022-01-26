@@ -50,19 +50,15 @@ After you've got your application running, it's time to get ready to deploy it. 
 
 Choose your branch (`main` by default) and then click to promote that branch. For more on branching, check refer to the [documentation](https://docs.planetscale.com/concepts/branching).
 
-Now that your branch has been promoted to master, you can either use the existing password you generated earlier for running locally or create a new password. Regardless, you'll need a password in the deployment steps below.
+Now that your branch has been promoted to master, you can either use the existing password you generated earlier for running locally or create a new password. Regardless, you'll need a password in the deployment steps below. Choose one of the following deploy buttons and make sure to update the `DATABASE_URL` variable during this setup process.
 
 ### Deploy on Vercel
 
-
 <a href="https://vercel.com/new/clone?repository-url=https://github.com/planetscale/nextjs-starter&env=DATABASE_URL&project-name=nextjs-starter&repo-name=nextjs-starter" target="_blank"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
-
-Make sure to update the `DATABASE_URL` variable during this setup process.
-
 
 ### Deploy on Netlify
 
-Let's deploy to Netlify.
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/planetscale/nextjs-starter&env=DATABASE_URL)
 
 ## Learn More
 
