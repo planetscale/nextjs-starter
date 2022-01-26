@@ -2,7 +2,7 @@
 
 This is a [Next.js](https://nextjs.org/) project that uses [Prisma](https://www.prisma.io/) to connect to a [PlanetScale](https://planetscale.com/) database and [Tailwind CSS](https://tailwindcss.com/) for styling.
 
-## Getting Started
+## Getting started
 
 Clone the repository.
 
@@ -44,13 +44,15 @@ Open your browser at [localhost:3000](localhost:3000) to see the running applica
 
 ## Deploying
 
-After you've got your application running, it's time to get ready to deploy it. To do so, you'll need to promote your databse branch (`main` by default) to be the production branch. Inside of the dashboard page for your branch, you should see the `Promote a branch to production` callout.
+After you've got your application running, it's time to get ready to deploy it. To do so, you'll need to promote your database branch (`main` by default) to be the production branch (more on branching [here](https://docs.planetscale.com/concepts/branching)). Inside of the dashboard page for your branch, you should see the `Promote a branch to production` callout.
 
 ![Promote Branch to Master](docs/images/promote-branch.png)
 
-Choose your branch (`main` by default) and then click to promote that branch. For more on branching, check refer to the [documentation](https://docs.planetscale.com/concepts/branching).
+Choose your branch (`main` by default) and then click to promote that branch.
 
-Now that your branch has been promoted to master, you can either use the existing password you generated earlier for running locally or create a new password. Regardless, you'll need a password in the deployment steps below. Choose one of the following deploy buttons and make sure to update the `DATABASE_URL` variable during this setup process.
+Now that your branch has been promoted to master, you can either use the existing password you generated earlier for running locally or create a new password. Regardless, you'll need a password in the deployment steps below.
+
+Choose one of the following deploy buttons and make sure to update the `DATABASE_URL` variable during this setup process.
 
 ### Deploy on Vercel
 
@@ -58,8 +60,9 @@ Now that your branch has been promoted to master, you can either use the existin
 
 ### Deploy on Netlify
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/planetscale/nextjs-starter#DATABASE_URL=<YOUR_DB_URL>)
+*Note: The `Netlify.toml` file in this repository includes the configuration for you to customize the `DATABASE_URL` property on the initial deploy.
 
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/planetscale/nextjs-starter)
 
 ## Learn More
 
