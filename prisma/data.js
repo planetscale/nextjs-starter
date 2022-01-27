@@ -1,7 +1,7 @@
-import { Prisma } from '@prisma/client'
+const { Prisma } = require('@prisma/client');
 
 //shirts
-export const categories = [
+const categories = [
     {
         name: "Hats",
         description: "Things you can wear on your head"
@@ -17,7 +17,7 @@ export const categories = [
 ];
 
 //
-export const products = [
+const products = [
     {
         name: "Cool hat.",
         description: "A nice hat to wear on your head",
@@ -47,3 +47,7 @@ export const products = [
         category_id: 3,
     }
 ]
+
+module.exports = {
+    products, categories
+}
