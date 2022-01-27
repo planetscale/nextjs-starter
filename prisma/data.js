@@ -1,6 +1,5 @@
 const { Prisma } = require('@prisma/client');
 
-//shirts
 const categories = [
     {
         name: "Hats",
@@ -16,7 +15,6 @@ const categories = [
     }
 ];
 
-//
 const products = [
     {
         name: "Cool hat.",
