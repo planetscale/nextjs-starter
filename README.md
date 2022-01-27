@@ -18,7 +18,7 @@ npm install
 
 ## Set up the database
 
-Create a PlanetScale database in the [dashboard](https://app.planetscale.com/) or by using the [CLI](https://planetscale.com/cli). Then, create a Connection string for your database by following the [documentation](https://docs.planetscale.com/concepts/connection-strings).
+Create a PlanetScale database in the [dashboard](https://app.planetscale.com/) or by using the [CLI](https://planetscale.com/cli). Then, create a Connection string for your database by following the [connection strings documentation](https://docs.planetscale.com/concepts/connection-strings).
 
 Copy the `.env.example` file as `.env` and update the `DATABASE_URL` property with the following format.
 
@@ -44,7 +44,7 @@ Open your browser at [localhost:3000](localhost:3000) to see the running applica
 
 ## Deploying
 
-After you've got your application running, it's time to get ready to deploy it. To do so, you'll need to promote your database branch (`main` by default) to be the production branch (more on branching [here](https://docs.planetscale.com/concepts/branching)). Inside of the dashboard page for your branch, you should see the `Promote a branch to production` callout.
+After you've got your application running, it's time to get ready to deploy it. To do so, you'll need to promote your database branch (`main` by default) to be the production branch ([read the branching documentation](https://docs.planetscale.com/concepts/branching)). Inside of the dashboard page for your branch, you should see the `Promote a branch to production` callout.
 
 ![Promote Branch to Master](docs/images/promote-branch.png)
 
