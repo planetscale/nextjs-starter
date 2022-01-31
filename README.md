@@ -1,28 +1,71 @@
-## Next.js starter
+# Next.js starter
 
 This is a [Next.js](https://nextjs.org/) project that uses [Prisma](https://www.prisma.io/) to connect to a [PlanetScale](https://planetscale.com/) database and [Tailwind CSS](https://tailwindcss.com/) for styling.
 
-## Getting started
+## Prerequisites
 
-Clone the repository.
+- [Node.js](https://nodejs.org/en/download/)
+- [PlanetScale CLI](https://github.com/planetscale/cli)
+- Authenticate the CLI with the following command:
+
+```
+pscale auth login
+```
+
+## Set up the database
+
+Create a new database with the following command:
+
+```bash
+pscale database create <DATABASE_NAME>
+```
+
+> A branch, `main`, was automatically created when you created your database, so you can use that for `BRANCH_NAME` in the steps below.
+
+## Set up the starter Next.js app
+
+Clone the starter repository.
 
 ```bash
 git clone https://github.com/planetscale/nextjs-starter
 ```
 
-Install dependencies.
+Install the dependencies.
 
 ```bash
 npm install
 ```
 
-## Set up the database
+Next, you'll need to create a database username and password through the CLI to connect to your application. If you'd prefer to use the dashboard for this step, you can find those instructions in the [Connection Strings documentation](/concepts/connection-strings#creating-a-password) and then come back here to finish setup.
 
-Create a PlanetScale database in the [dashboard](https://app.planetscale.com/) or by using the [CLI](https://planetscale.com/cli). Then, create a Connection string for your database by following the [connection strings documentation](https://docs.planetscale.com/concepts/connection-strings).
+First, create your `.env` file by renaming the `.env.example` file to `.env`:
 
-Copy the `.env.example` file as `.env` and update the `DATABASE_URL` property with the following format.
+```bash
+mv .env.example .env
+```
 
-```text
+Next, using the PlanetScale CLI, create a new username and password for the branch of your database:
+
+```
+pscale password create <DATABASE_NAME> <BRANCH_NAME> <PASSWORD_NAME>
+```
+
+> The `PASSWORD_NAME` value represents the name of the username and password being generated. You can have multiple credentials for a branch, so this gives you a way to categorize them. To manage your passwords in the dashboard, go to your database overview page, click "Settings", and then click "Passwords".
+
+Take note of the values returned to you, as you won't be able to see this password again.
+
+```
+Password production-password was successfully created.
+Please save the values below as they will not be shown again
+
+  NAME                  USERNAME       ACCESS HOST URL                     ROLE               PLAIN TEXT
+ --------------------- -------------- ----------------------------------- ------------------ -------------------------------------------------------
+  production-password   xxxxxxxxxxxxx   xxxxxx.us-east-2.psdb.cloud   Can Read & Write   pscale_pw_xxxxxxx                                                                                    
+```
+
+You'll use these properties to construct your connection string, which will be the value for `DATABASE_URL` in your `.env` file. Update the `DATABASE_URL` property with your connection string in the following format:
+
+```
 mysql://<USERNAME>:<PLAIN_TEXT_PASSWORD>@<ACCESS_HOST_URL>/<DATABASE_NAME>?sslaccept=strict
 ```
 
@@ -30,13 +73,13 @@ Push the database schema to your PlanetScale database using Prisma.
 
 `npx prisma db push`
 
-Run the seed script to populate data.
+Run the seed script to populate your database with `Product` and `Category` data.
 
 `npx run seed`
 
 ## Run the App
 
-Run the app.
+Run the app with following command:
 
 `npm run dev`
 
@@ -44,13 +87,13 @@ Open your browser at [localhost:3000](localhost:3000) to see the running applica
 
 ## Deploying
 
-After you've got your application running, it's time to get ready to deploy it. To do so, you'll need to promote your database branch (`main` by default) to be the production branch ([read the branching documentation](https://docs.planetscale.com/concepts/branching)). Inside of the dashboard page for your branch, you should see the `Promote a branch to production` callout.
+After you've got your application running locally, it's time to deploy it. To do so, you'll need to promote your database branch (`main` by default) to be the production branch ([read the branching documentation for more information](https://docs.planetscale.com/concepts/branching)).
 
-![Promote Branch to Master](docs/images/promote-branch.png)
+```bash
+pscale branch promote <DATABASE_NAME> <BRANCH_NAME>
+```
 
-Choose your branch (`main` by default) and then click to promote that branch.
-
-Now that your branch has been promoted to master, you can either use the existing password you generated earlier for running locally or create a new password. Regardless, you'll need a password in the deployment steps below.
+Now that your branch has been promoted to production, you can either use the existing password you generated earlier for running locally or create a new password. Regardless, you'll need a password in the deployment steps below.
 
 Choose one of the following deploy buttons and make sure to update the `DATABASE_URL` variable during this setup process.
 
@@ -69,3 +112,12 @@ Choose one of the following deploy buttons and make sure to update the `DATABASE
 To learn more about PlanetScale, take a look at the following resources:
 
 - [PlanetScale  quick start guide](https://docs.planetscale.com/tutorials/planetscale-quick-start-guide) - Learn how to get started with PlanetScale.
+
+## What's next?
+
+Learn more about how PlanetScale allows you to make [non-blocking schema changes](/concepts/nonblocking-schema-changes) to your database tables without locking or causing downtime for production databases. If you're interested in learning how to secure your application when connecting to PlanetScale,
+please read [Connecting to PlanetScale securely](/reference/planetscale-security).
+
+## Need help?
+
+Get help from [PlanetScale's support team](https://www.planetscale.com/support), or join our [GitHub Discussion board](https://github.com/planetscale/beta/discussions) to see how others are using PlanetScale.
