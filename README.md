@@ -8,7 +8,7 @@ This is a [Next.js](https://nextjs.org/) project that uses [Prisma](https://www.
 - [PlanetScale CLI](https://github.com/planetscale/cli)
 - Authenticate the CLI with the following command:
 
-```
+```sh
 pscale auth login
 ```
 
@@ -16,7 +16,7 @@ pscale auth login
 
 Create a new database with the following command:
 
-```bash
+```sh
 pscale database create <DATABASE_NAME>
 ```
 
@@ -26,13 +26,13 @@ pscale database create <DATABASE_NAME>
 
 Clone the starter repository.
 
-```bash
+```sh
 git clone https://github.com/planetscale/nextjs-starter
 ```
 
 Install the dependencies.
 
-```bash
+```sh
 npm install
 ```
 
@@ -40,13 +40,13 @@ Next, you'll need to create a database username and password through the CLI to 
 
 First, create your `.env` file by renaming the `.env.example` file to `.env`:
 
-```bash
+```sh
 mv .env.example .env
 ```
 
 Next, using the PlanetScale CLI, create a new username and password for the branch of your database:
 
-```
+```sh
 pscale password create <DATABASE_NAME> <BRANCH_NAME> <PASSWORD_NAME>
 ```
 
@@ -54,7 +54,7 @@ pscale password create <DATABASE_NAME> <BRANCH_NAME> <PASSWORD_NAME>
 
 Take note of the values returned to you, as you won't be able to see this password again.
 
-```
+```text
 Password production-password was successfully created.
 Please save the values below as they will not be shown again
 
@@ -65,7 +65,7 @@ Please save the values below as they will not be shown again
 
 You'll use these properties to construct your connection string, which will be the value for `DATABASE_URL` in your `.env` file. Update the `DATABASE_URL` property with your connection string in the following format:
 
-```
+```text
 mysql://<USERNAME>:<PLAIN_TEXT_PASSWORD>@<ACCESS_HOST_URL>/<DATABASE_NAME>?sslaccept=strict
 ```
 
@@ -89,7 +89,7 @@ Open your browser at [localhost:3000](localhost:3000) to see the running applica
 
 After you've got your application running locally, it's time to deploy it. To do so, you'll need to promote your database branch (`main` by default) to be the production branch ([read the branching documentation for more information](https://docs.planetscale.com/concepts/branching)).
 
-```bash
+```sh
 pscale branch promote <DATABASE_NAME> <BRANCH_NAME>
 ```
 
