@@ -60,7 +60,7 @@ Please save the values below as they will not be shown again
 
   NAME                  USERNAME       ACCESS HOST URL                     ROLE               PLAIN TEXT
  --------------------- -------------- ----------------------------------- ------------------ -------------------------------------------------------
-  production-password   xxxxxxxxxxxxx   xxxxxx.us-east-2.psdb.cloud   Can Read & Write   pscale_pw_xxxxxxx                                                                                    
+  production-password   xxxxxxxxxxxxx   xxxxxx.us-east-2.psdb.cloud   Can Read & Write   pscale_pw_xxxxxxx
 ```
 
 You'll use these properties to construct your connection string, which will be the value for `DATABASE_URL` in your `.env` file. Update the `DATABASE_URL` property with your connection string in the following format:
@@ -75,7 +75,7 @@ Push the database schema to your PlanetScale database using Prisma.
 
 Run the seed script to populate your database with `Product` and `Category` data.
 
-`npx run seed`
+`npm run seed`
 
 ## Run the App
 
@@ -103,7 +103,7 @@ Choose one of the following deploy buttons and make sure to update the `DATABASE
 
 ### Deploy on Netlify
 
-*Note: The `Netlify.toml` file in this repository includes the configuration for you to customize the `DATABASE_URL` property on the initial deploy.
+\*Note: The `Netlify.toml` file in this repository includes the configuration for you to customize the `DATABASE_URL` property on the initial deploy.
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/planetscale/nextjs-starter)
 
@@ -111,11 +111,11 @@ Choose one of the following deploy buttons and make sure to update the `DATABASE
 
 To learn more about PlanetScale, take a look at the following resources:
 
-- [PlanetScale  quick start guide](https://docs.planetscale.com/tutorials/planetscale-quick-start-guide) - Learn how to get started with PlanetScale.
+- [PlanetScale quick start guide](https://docs.planetscale.com/tutorials/planetscale-quick-start-guide) - Learn how to get started with PlanetScale.
 
 ## What's next?
 
-Learn more about how PlanetScale allows you to make [non-blocking schema changes](/concepts/nonblocking-schema-changes) to your database tables without locking or causing downtime for production databases. If you're interested in learning how to secure your application when connecting to PlanetScale,
+Learn more about how PlanetScale allows you to make [non-blocking schema changes](https://docs.planetscale.com/concepts/nonblocking-schema-changes) to your database tables without locking or causing downtime for production databases. If you're interested in learning how to secure your application when connecting to PlanetScale,
 please read [Connecting to PlanetScale securely](/reference/planetscale-security).
 
 ## Need help?
