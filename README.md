@@ -63,7 +63,7 @@ Please save the values below as they will not be shown again
   production-password   xxxxxxxxxxxxx   xxxxxx.us-east-2.psdb.cloud   Can Read & Write   pscale_pw_xxxxxxx
 ```
 
-You'll use these properties to construct your connection string, which will be the value for `DATABASE_URL` in your `.env` file. Update the `DATABASE_URL` property with your connection string in the following format:
+You'll use these properties to construct your connection string, which will be the value for `PLANETSCALE_PRISMA_DATABASE_URL` in your `.env` file. Update the `PLANETSCALE_PRISMA_DATABASE_URL` property with your connection string in the following format:
 
 ```text
 mysql://<USERNAME>:<PLAIN_TEXT_PASSWORD>@<ACCESS_HOST_URL>/<DATABASE_NAME>?sslaccept=strict
@@ -95,15 +95,15 @@ pscale branch promote <DATABASE_NAME> <BRANCH_NAME>
 
 Now that your branch has been promoted to production, you can either use the existing password you generated earlier for running locally or create a new password. Regardless, you'll need a password in the deployment steps below.
 
-Choose one of the following deploy buttons and make sure to update the `DATABASE_URL` variable during this setup process.
+Choose one of the following deploy buttons and make sure to update the `PLANETSCALE_PRISMA_DATABASE_URL` variable during this setup process.
 
 ### Deploy on Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/planetscale/nextjs-starter&env=DATABASE_URL)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/planetscale/nextjs-starter&env=PLANETSCALE_PRISMA_DATABASE_URL)
 
 ### Deploy on Netlify
 
-\*Note: The `Netlify.toml` file in this repository includes the configuration for you to customize the `DATABASE_URL` property on the initial deploy.
+\*Note: The `Netlify.toml` file in this repository includes the configuration for you to customize the `PLANETSCALE_PRISMA_DATABASE_URL` property on the initial deploy.
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/planetscale/nextjs-starter)
 
