@@ -1,2 +1,2 @@
 [template.environment]
-PLANETSCALE_PRISMA_DATABASE_URL = "Database URL"
+DATABASE_URL = "Database URL"
