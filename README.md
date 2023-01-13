@@ -87,7 +87,7 @@ Open your browser at [localhost:3000](localhost:3000) to see the running applica
 
 ## Deploying
 
-After you've got your application running locally, it's time to deploy it. To do so, you'll need to promote your database branch (`main` by default) to be the production branch ([read the branching documentation for more information](https://docs.planetscale.com/concepts/branching)).
+After you've got your application running locally, it's time to deploy it. To do so, you'll need to promote your database branch (`main` by default) to be the production branch ([read the branching documentation for more information](https://planetscale.com/docs/concepts/branching)).
 
 ```sh
 pscale branch promote <DATABASE_NAME> <BRANCH_NAME>
@@ -111,11 +111,11 @@ Choose one of the following deploy buttons and make sure to update the `DATABASE
 
 To learn more about PlanetScale, take a look at the following resources:
 
-- [PlanetScale quick start guide](https://docs.planetscale.com/tutorials/planetscale-quick-start-guide) - Learn how to get started with PlanetScale.
+- [PlanetScale quick start guide](https://planetscale.com/docs/tutorials/planetscale-quick-start-guide) - Learn how to get started with PlanetScale.
 
 ## What's next?
 
-Learn more about how PlanetScale allows you to make [non-blocking schema changes](https://docs.planetscale.com/concepts/nonblocking-schema-changes) to your database tables without locking or causing downtime for production databases. If you're interested in learning how to secure your application when connecting to PlanetScale,
+Learn more about how PlanetScale allows you to make [non-blocking schema changes](https://planetscale.com/docs/concepts/nonblocking-schema-changes) to your database tables without locking or causing downtime for production databases. If you're interested in learning how to secure your application when connecting to PlanetScale,
 please read [Connecting to PlanetScale securely](/reference/planetscale-security).
 
 ## Need help?
