@@ -1,12 +1,14 @@
 generator client {
     provider        = "prisma-client-js"
+    // Preview feature "referentialIntegrity" is deprecated. The functionality can be used without specifying it as a preview feature.
     previewFeatures = ["referentialIntegrity"]
 }
 
 datasource db {
     provider             = "mysql"
     url                  = env("DATABASE_URL")
-    referentialIntegrity = "prisma"
+    // The `referentialIntegrity` attribute is deprecated. Please use `relationMode` instead. Learn more at https://pris.ly/d/relation-mode
+    relationMode = "prisma"
 }
 
 model Product {
