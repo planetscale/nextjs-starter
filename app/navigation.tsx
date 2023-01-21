@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Navigation() {
   return (
-    <nav className="bg-[#1C1C1C] p-3 rounded-xl flex font-sans items-center">
+    <nav className="bg-[#1C1C1C] pr-9 pl-9 pt-4 pb-4 rounded-xl flex font-sans items-center mb-6">
       <Link href="/" className="w-1/3 text-left font-bold">
         Sarmad Ahmad
       </Link>
