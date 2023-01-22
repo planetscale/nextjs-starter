@@ -23,9 +23,7 @@ function Welcome() {
           </p>
         </div>
       </div>
-      <div>
-        <Image src={profilePic} alt="Picture of author" width={350} height={300} className="rounded-xl" />
-      </div>
+      <div>{/* <Image src={profilePic} alt="Picture of author" width={350} height={300} className="rounded-xl" /> */}</div>
     </div>
   );
 }
