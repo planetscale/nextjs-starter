@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import profilePic from "../../public/assets/Bewerbungsfoto.jpg";
 
 function Welcome() {
   return (

@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import Footer from "./footer";
 import Navigation from "./navigation";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -9,6 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="w-3/5">
           <Navigation />
           {children}
+          <Footer />
         </main>
       </body>
     </html>
