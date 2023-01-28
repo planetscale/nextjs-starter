@@ -12,14 +12,12 @@ function Welcome() {
         <div className="font-roboto text-xl font-light">
           <p>
             I am a frontend developer by
-            <br /> profession, but I also have a passion
-            <br /> for gaming and playing the guitar in <br /> my free time.
+            <br /> profession, but I also have a passion for gaming <br /> and playing the guitar in my free time.
           </p>
           <br />
           <p>
-            Here you will find my thoughts on the
-            <br /> latest industry trends, tips and tricks
-            <br /> for frontend development.
+            Here you will find my thoughts on the latest industry trends,
+            <br /> tips and tricks for frontend development.
           </p>
         </div>
       </div>
