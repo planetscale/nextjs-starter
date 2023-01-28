@@ -9,7 +9,7 @@ function Welcome() {
         <h1 className="text-7xl leading-tight mb-8">
           Welcome <br /> to my <br /> blog 👋🏾
         </h1>
-        <div className="font-sans text-xl font-light">
+        <div className="font-roboto text-xl font-light">
           <p>
             I am a frontend developer by
             <br /> profession, but I also have a passion
