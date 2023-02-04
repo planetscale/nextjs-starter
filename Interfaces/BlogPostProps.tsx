@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 
-export interface LatestPostProps {
+export interface BlogPostProps {
   id: number;
   title: string;
   shortDescription: string;
