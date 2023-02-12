@@ -11,7 +11,7 @@ export default function Navigation() {
         <Link href="/about" className="w-1/3">
           About
         </Link>
-        <Link href="/blog" className="w-1/3">
+        <Link href="/blogs" className="w-1/3">
           Blog
         </Link>
         <Link href="https://github.com/SarmadAD" className="w-1/3" target="_blank">
