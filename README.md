@@ -1,5 +1,7 @@
 # Next.js starter
 
+> **Note:** This starter uses [Prisma](https://www.prisma.io/)'s MySQL provider and a `mysql://` connection string for PlanetScale Vitess/MySQL. For PlanetScale Postgres, use Prisma's PostgreSQL provider and a Postgres connection string. For more information and examples, see the [PlanetScale Postgres documentation](https://planetscale.com/docs/postgres).
+
 This is a [Next.js](https://nextjs.org/) project that uses [Prisma](https://www.prisma.io/) to connect to a [PlanetScale](https://planetscale.com/) database and [Tailwind CSS](https://tailwindcss.com/) for styling.
 
 ## Prerequisites
