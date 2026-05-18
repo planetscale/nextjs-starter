@@ -1,6 +1,7 @@
 generator client {
     provider        = "prisma-client-js"
     previewFeatures = ["referentialIntegrity"]
+    binaryTargets   = ["debian-openssl-3.0.x"]
 }
 
 datasource db {
@@ -17,8 +18,11 @@ model Product {
     image       String
     category    Category? @relation(fields: [category_id], references: [id])
     category_id Int
+    company     Company @relation(fields: [company_id], references: [id])
+    company_id  Int
 
     @@index([category_id])
+    @@index([company_id])
 }
 
 model Category {
@@ -26,4 +30,30 @@ model Category {
     name        String
     description String
     products    Product[]
+}
+
+model Company {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  users     User[]
+  products  Product[]
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  firstName String
+  lastName  String
+  email     String   @unique
+  password  String
+  role      Role     @default(USER)
+  company   Company  @relation(fields: [companyId], references: [id])
+  companyId   Int
+
+  @@index([companyId])
+}
+
+enum Role {
+  ROOT_ADMIN
+  ADMIN
+  USER
 }

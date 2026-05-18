@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Product from '../components/Product';
 import prisma from '../lib/prisma';
+import { Navbar } from './components/navbar';
 
 export default function Home({ products }) {
   return (
@@ -12,6 +13,7 @@ export default function Home({ products }) {
       </Head>
 
       <main className="p-10 mx-auto max-w-4xl">
+        <Navbar />
         <h1 className="text-6xl font-bold mb-4 text-center">Next.js Starter</h1>
         <p className="mb-20 text-xl text-center">
           🔥 Shop from the hottest items in the world 🔥
